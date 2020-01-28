@@ -11,7 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: 1. Git Checkout
-      uses: actions/checkout@newpackage
+      uses: actions/checkout@v2
+      with:
+        ref: newpackage
 
     - name: 2. Install Nodejs 10.x
       uses: actions/setup-node@v1
