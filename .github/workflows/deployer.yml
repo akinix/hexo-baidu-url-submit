@@ -1,0 +1,28 @@
+name: Publish To Npm
+
+on: 
+  push:
+    branches:
+      - newpackage
+
+jobs:
+  build:
+    name: Build and publish by GitHub Actions
+    runs-on: ubuntu-latest
+    steps:
+    - name: 1. Git Checkout
+      uses: actions/checkout@newpackage
+
+    - name: 2. Install Nodejs 10.x
+      uses: actions/setup-node@v1
+
+    - name: 3. Npm Install
+      run: |
+        npm run install
+
+    - name: 4. Npm Publish
+      env:
+        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          npm config set //registry.npmjs.org/:_authToken=$NPM_TOKEN
+          npm run trypublish

@@ -1,13 +1,14 @@
 {
-  "name": "hexo-baidu-url-submit",
-  "version": "0.0.6",
+  "name": "hexo-baidu-url-submit-env",
+  "version": "0.0.1",
   "description": "submit new posts urls to baidu search engine",
   "main": "index",
   "scripts": {
+    "trypublish": "npm publish || true"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/huiwang/hexo-baidu-url-submit.git"
+    "url": "https://github.com/akinix/hexo-baidu-url-submit.git"
   },
 
   "keywords": [
